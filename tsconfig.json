@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "shiba-ui-toolkit": ["./src"]
+    },
+      "outDir": "./dist",
+    "declarationDir": "./dist",
+    "allowJs": false,
+    "checkJs": false,
+    "lib": ["esnext", "dom"],
+    "target": "ESNext",
+    "declarationMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "module": "ESNext",
+    "declaration": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": false,
+    "types": [] 
+  },
+  "include": ["./src/**/*", "./src/theme/config/styled-components.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
