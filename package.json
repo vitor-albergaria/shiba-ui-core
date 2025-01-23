@@ -68,7 +68,7 @@
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "prepare": "npm run build",
     "test": "jest --watchAll",
-    "build-storybook": "build-storybook -o storybook-static"
+    "build-storybook": "storybook build -o storybook-static"
   },
   "publishConfig": {
     "access": "public"
