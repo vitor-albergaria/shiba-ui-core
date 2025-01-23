@@ -67,7 +67,8 @@
     "start": "storybook dev -p 8008 -c ./.storybook/config",
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "prepare": "npm run build",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "build-storybook": "build-storybook -o storybook-static"
   },
   "publishConfig": {
     "access": "public"
