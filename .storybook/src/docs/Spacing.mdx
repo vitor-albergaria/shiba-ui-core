@@ -1,0 +1,18 @@
+import { t } from 'i18next';
+import { spacing } from '../../../src/theme/constants/spacing';
+import { Meta, Title, IconGallery } from '@storybook/blocks';
+import { DocsTitle, DocsDescription } from '../components/TextElements';
+import { DocsSpacing } from '../components/DocsSpacing';
+
+<Meta title="Design System/Spacing" />
+
+<DocsTitle text="spacing_title" />
+<DocsDescription text="spacing_description" />
+
+<br />
+
+<IconGallery>
+  {Object.entries(spacing).map(([name, value]) => (
+    <DocsSpacing key={name} name={name} value={value} />
+  ))}
+</IconGallery>

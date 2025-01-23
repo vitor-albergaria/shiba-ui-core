@@ -1,0 +1,49 @@
+import { t } from 'i18next';
+import { Meta, Typeset } from '@storybook/blocks';
+import { fontSize } from '../../../src/theme/constants/fontSize';
+import { DocsTitle, DocsSubtitle, DocsDescription } from '../components/TextElements';
+
+<Meta title="Design System/Typography" />
+
+<DocsTitle text="typography_title" />
+<DocsDescription text="typography_description" />
+
+<Typeset
+  fontSizes={[
+    fontSize.xs * 10,
+    fontSize.sm * 10,
+    fontSize.md * 10,
+    fontSize.lg * 10,
+    fontSize.xl * 10,
+    fontSize['2x'] * 10,
+    fontSize['3x'] * 10,
+    fontSize['4x'] * 10,
+    fontSize['5x'] * 10,
+    fontSize['6x'] * 10,
+  ]}
+  sampleText={t('typography_sample')}
+/>
+
+<DocsSubtitle text="font_sizes_title" />
+<DocsDescription text="font_sizes_description" />
+
+- **xs:** 1rem (10px)
+- **sm:** 1.2rem (12px)
+- **md:** 1.4rem (14px)
+- **lg:** 1.6rem (16px)
+- **xl:** 1.8rem (18px)
+- **2x:** 2.0rem (20px)
+- **3x:** 2.4rem (24px)
+- **4x:** 2.8rem (28px)
+- **5x:** 3.2rem (32px)
+- **6x:** 3.6rem (36px)
+
+<DocsSubtitle text="font_weight_title" />
+<DocsDescription text="font_weight_description" />
+
+- **Light (300)**
+- **Regular (400)**
+- **Medium (500)**
+- **Strong (600)**
+- **Bold (700)**
+- **Heavy (800)**

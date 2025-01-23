@@ -1,0 +1,54 @@
+import { t } from 'i18next';
+import {
+  color,
+  darkThemeColors,
+  oceanThemeColors,
+} from '../../../src/theme/constants/color';
+import { Meta, ColorItem, ColorPalette } from '@storybook/blocks';
+import { DocsTitle, DocsDescription } from '../components/TextElements';
+
+<Meta title="Design System/Colors" />
+
+<DocsTitle text="colors_title" />
+<DocsDescription text="colors_description" />
+
+<br />
+
+<ColorPalette>
+  {Object.entries(color).map(([key, value]) => (
+    <ColorItem
+      key={key}
+      title={`theme.color.${key}`}
+      subtitle={key}
+      colors={{ 'Hex code:': value }}
+    />
+  ))}
+</ColorPalette>
+
+<DocsTitle text="Dark theme" />
+<br />
+
+<ColorPalette>
+  {Object.entries(darkThemeColors).map(([key, value]) => (
+    <ColorItem
+      key={key}
+      title={`theme.color.${key}`}
+      subtitle={key}
+      colors={{ 'Hex code:': value }}
+    />
+  ))}
+</ColorPalette>
+
+<DocsTitle text="Ocean theme" />
+<br />
+
+<ColorPalette>
+  {Object.entries(oceanThemeColors).map(([key, value]) => (
+    <ColorItem
+      key={key}
+      title={`theme.color.${key}`}
+      subtitle={key}
+      colors={{ 'Hex code:': value }}
+    />
+  ))}
+</ColorPalette>
