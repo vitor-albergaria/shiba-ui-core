@@ -14,15 +14,20 @@ export { default as Skeleton } from './components/Feedback/Skeleton';
 export { default as Spinner } from './components/Feedback/Spinner';
 export { default as Toast } from './components/Feedback/Toast';
 export { default as Tooltip } from './components/Feedback/Tooltip';
+export { default as Badge } from './components/Feedback/Badge';
 
 // Inputs
 export { default as Range } from './components/Inputs/Range';
 
 // Navigation
 export { default as Pagination } from './components/Navigation/Pagination';
+export { default as Header } from './components/Navigation/Header';
 
 // TextElements
 export { default as TextDisplay } from './components/TextElements/TextDisplay';
+
+//Viewers
+export { default as Timeline } from './components/Viewers/Timeline';
 
 // Provider
 export { StyledThemeProvider } from './theme/providers';
