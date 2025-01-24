@@ -142,5 +142,27 @@ const customToast = toast.success('Mensagem de exemplo', {
       "Accepts a string to specify the position: 'top', 'bottom', 'left', or 'right'.",
     docs_data:
       "Accepts an array of objects, each containing 'percent', 'color', and 'label' to define pie chart segments.",
+    docs_install_title: 'Installation',
+    docs_install_description: 'To install the library, use npm or yarn:',
+    docs_provider_title: 'Theme Provider Setup',
+    docs_provider_description:
+      'To use the components, wrap your application with the `StyledThemeProvider`:',
+    docs_usage_title: 'Component Usage Example',
+    docs_usage_description:
+      'Import the component and use it in your application.',
+    docs_theming_title: 'Using Custom Themes',
+    docs_theming_description:
+      'You can pass a custom theme through the customTheme property.',
+    docs_theme_title: 'Choosing the Theme',
+    docs_theme_description:
+      'Choose between the default themes: light, dark, or ocean using the themeVariant property.',
+    docs_fonts_title: 'Overriding Fonts',
+    docs_fonts_description:
+      'To override fonts, in addition to setting the custom font, you will also need to edit the fontFamily token in the customTheme.',
+    docs_styling_title: 'Using Theme in Custom Components',
+    docs_styling_description_one:
+      'To get started, install styled-components using npm or yarn:',
+    docs_styling_description_two:
+      'Once you have styled-components installed, use the useTheme hook to access the theme and pass it to your styled components:',
   },
 };

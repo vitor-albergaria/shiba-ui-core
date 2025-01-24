@@ -13,6 +13,11 @@ const preview: Preview = {
   parameters: {
     layout: 'fullscreen',
     docs: { container: DocsSettings },
+    options: {
+      storySort: {
+        order: ['Quick Start', 'Design System', 'Components']
+      },
+    },
   },
 };
 

@@ -1,0 +1,70 @@
+import { t } from 'i18next';
+import { Meta, Typeset } from '@storybook/blocks';
+import { fontSize } from '../../../../src/theme/constants/fontSize';
+import { DocsTitle, DocsDescription } from '../../components/TextElements';
+
+<Meta title="Quick Start/Theming" />
+
+<DocsTitle text="docs_theming_title" />
+<DocsDescription text="docs_theming_description" />
+
+```jsx
+import { StyledThemeProvider } from 'shiba-ui-core';
+
+const customTheme = {
+  color: {
+    primary: '#ff5733',
+  },
+};
+
+function App() {
+  return (
+    <StyledThemeProvider customTheme={customTheme}>
+      {/* Components... */}
+    </StyledThemeProvider>
+  );
+}
+```
+
+<DocsTitle text="docs_theme_title" />
+<DocsDescription text="docs_theme_description" />
+
+```jsx
+import { StyledThemeProvider } from 'shiba-ui-core';
+
+function App() {
+  return (
+    <StyledThemeProvider themeVariant="dark">
+      {/* Components... */}
+    </StyledThemeProvider>
+  );
+}
+```
+
+<DocsTitle text="docs_fonts_title" />
+<DocsDescription text="docs_fonts_description" />
+
+```jsx
+import { StyledThemeProvider } from 'shiba-ui-core';
+
+const customFonts = `
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('/path/to/font.woff2') format('woff2');
+  }
+`;
+
+const customTheme = {
+  fontFamily: {
+    default: 'CustomFont',
+  },
+};
+
+function App() {
+  return (
+    <StyledThemeProvider customFonts={customFonts} customTheme={customTheme}>
+      {/* Components... */}
+    </StyledThemeProvider>
+  );
+}
+```

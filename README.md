@@ -1,25 +1,49 @@
 ## Summary
 
-**Shiba UI** is a React component library developed with a strict focus on best practices, modern technologies, and a design-oriented approach. The project aims to provide reusable and highly customizable components, facilitating the creation of consistent and accessible user interfaces.
+**Shiba UI** is a React library focused on best practices, modern tech, and design. It provides reusable, customizable components for consistent, accessible UIs.
 
 #### ⚒️ Technologies: React, Styled Components, TypeScript, Storybook, i18n and Jest.
 
+## Installation
+
+To install **Shiba UI Core**, run the following command:
+
+```bash
+npm install shiba-ui-core
+```	
+
+Or, if you are using yarn:
+
+```bash
+yarn add shiba-ui-core
+```	
+
+After installation, import the components into your project:
+
+```bash
+import { Button } from 'shiba-ui-core';
+
+function App() {
+  return <Button text='My Button' onClick={() => alert('Hello!')} />;
+}
+```	
+
 ## Documentation
 
-Comprehensive documentation for Shiba UI is available on **Storybook**, which serves as a central repository for installation instructions, usage examples, and interactive testing. Storybook offers:
+Shiba UI documentation is available on Storybook, featuring installation guides, usage examples, and interactive testing:
 
-- **Interactive Components**: Real-time visualization and testing of components.
-- **Design System Documentation**: Details on colors, typography, spacing, and icons.
-- **Theme and Language Switching**: Allows toggling between available themes (Ocean, Dark, and Light) and provides language support, including English and Portuguese.
+- **Interactive Components:** Real-time visualization and testing.
+- **Design System:** Colors, typography, spacing, and icons.
+- **Theme/Language Support:** Themes (Ocean, Dark, Light) and English/Portuguese.
 
-#### 📄 To access the full documentation, visit: [Shiba UI - Storybook](https://vitor-albergaria.github.io/shiba-ui/)
+#### 📄 To access the full documentation, visit: [Shiba UI - Storybook](https://vitor-albergaria.github.io/shiba-ui-core/)
 
 ## Design System
 
-The Shiba UI Design System, developed in Figma, ensures consistency and usability. It encompasses essential sections, including color palettes, typography, spacing, and icons. The components are presented with practical examples, organized to facilitate integration and implementation in various projects.
+Shiba UI's Figma Design System ensures consistency with palettes, typography, spacing, and icons, including practical examples for easy integration.
 
-#### 🎨 To view the design system, visit: [Shiba UI - Figma](https://www.figma.com/design/OE4BUqiI4sLNfmQiKNA2MJ/SHIBA-UI)
+#### 🎨 To view the design system, visit: [Shiba UI - Figma](https://www.figma.com/design/OE4BUqiI4sLNfmQiKNA2MJ/Shiba-UI?m=auto&t=BhuV1qcG6VuX16wF-6)
 
 ---
 
-#### 🈂️ Para acessar a versão em português do README, clique aqui: [Readme - PT-BR](https://github.com/vitor-albergaria/shiba-ui/blob/main/README_PT_BR.md)
+#### 🈂️ Para acessar a versão em português do README, clique aqui: [Readme - PT-BR](https://github.com/vitor-albergaria/shiba-ui-core/blob/main/README_PT_BR.md)

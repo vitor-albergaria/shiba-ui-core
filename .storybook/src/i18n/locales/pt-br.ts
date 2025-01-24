@@ -30,7 +30,6 @@ export const pt = {
     docs_predefined: 'Aceita apenas valores fixos, conforme listado abaixo:',
     docs_type_number: 'Aceita um `number` para definir o estilo.',
 
-
     docs_color: 'Aceita cores de tema predefinidas ou valores de cor CSS.',
     docs_size: 'Aceita valores em formato `number` para definir o tamanho.',
     docs_size_predefined:
@@ -148,5 +147,27 @@ const customToast = toast.success('Mensagem de exemplo', {
       "Aceita uma string para especificar a posição: 'top', 'bottom', 'left' ou 'right'.",
     docs_data:
       "Aceita um array de objetos, cada um contendo 'percent', 'color' e 'label' para definir os segmentos do gráfico de pizza.",
+    docs_install_title: 'Instalação',
+    docs_install_description:
+      'Para instalar a biblioteca, utilize npm ou yarn:',
+    docs_provider_title: 'Configuração do Provider de Tema',
+    docs_provider_description:
+      'Para utilizar os componentes, envolva sua aplicação com o StyledThemeProvider:',
+    docs_usage_title: 'Exemplo de Uso de Componente',
+    docs_usage_description: 'Importe o componente e o use em sua aplicação.',
+    docs_theming_title: 'Usando Temas Customizados',
+    docs_theming_description:
+      'Você pode passar um tema personalizado através da propriedade customTheme.',
+    docs_theme_title: 'Escolhendo o Tema',
+    docs_theme_description:
+      'Escolha entre os temas padrão: light, dark ou ocean usando a propriedade themeVariant.',
+    docs_fonts_title: 'Sobrescrevendo Fontes',
+    docs_fonts_description:
+      'Para sobrescrever fontes, além de definir a fonte personalizada, você também precisará editar o token do fontFamily no customTheme.',
+    docs_styling_title: 'Usando o Tema em Componentes Personalizados',
+    docs_styling_description_one:
+      'Para começar, instale o styled-components utilizando npm ou yarn:',
+    docs_styling_description_two:
+      'Após instalar o styled-components, use o hook useTheme para acessar o tema e passá-lo para seus componentes estilizados:',
   },
 };
