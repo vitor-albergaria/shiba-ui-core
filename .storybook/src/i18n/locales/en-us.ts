@@ -164,5 +164,9 @@ const customToast = toast.success('Mensagem de exemplo', {
       'To get started, install styled-components using npm or yarn:',
     docs_styling_description_two:
       'Once you have styled-components installed, use the useTheme hook to access the theme and pass it to your styled components:',
+    docs_header:
+      'Accepts an array of objects with id, label, handleClick function, and optionally isInactive to disable an item.',
+    docs_timeline:
+      'Accepts an array of objects with id, title, subtitle, and details (an array of strings).',
   },
 };
