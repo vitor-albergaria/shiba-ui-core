@@ -9,6 +9,8 @@ export const BadgeContainer = styled.div<IBadgeStyles>`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  width: fit-content;
+  height: fit-content;
 
   column-gap: ${({ theme }) => theme.spacing.md};
   padding: ${({ theme }) => getSpacing(theme, 'sm lg')};

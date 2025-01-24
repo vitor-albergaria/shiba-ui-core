@@ -1,10 +1,8 @@
-import '../../assets/fonts/fonts.css';
-
 import React from 'react';
 import theme from '../../theme';
 import { IStyledProvider } from './types';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from '../../theme/config/globalStyles';
+import { GlobalStyles } from '../../theme/config/globalStyles';
 import { color, darkThemeColors, oceanThemeColors } from '../constants/color';
 
 const getThemeColors = (themeVariant: string) => {
@@ -25,7 +23,7 @@ export const StyledThemeProvider: React.FC<IStyledProvider> = ({
 
   return (
     <ThemeProvider theme={mergedTheme}>
-      <GlobalStyle />
+      <GlobalStyles />
       {customFonts && <style>{customFonts}</style>}
       {children}
     </ThemeProvider>
