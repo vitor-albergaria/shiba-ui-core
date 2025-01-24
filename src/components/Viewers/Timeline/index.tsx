@@ -2,6 +2,7 @@ import React from 'react';
 import * as S from './styles';
 import TextDisplay from '../../TextElements/TextDisplay';
 import { ITimeline } from './types';
+import { withTheme } from 'styled-components';
 
 const Timeline: React.FC<ITimeline> = ({ data = [], isHidden = false }) => {
   if (isHidden) return null;
@@ -42,4 +43,4 @@ const Timeline: React.FC<ITimeline> = ({ data = [], isHidden = false }) => {
   );
 };
 
-export default Timeline;
+export default withTheme(Timeline) as React.FC<ITimeline>;

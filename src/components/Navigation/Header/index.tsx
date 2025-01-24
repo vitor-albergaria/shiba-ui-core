@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Icon from '../../Feedback/Icon';
 import TextDisplay from '../../TextElements/TextDisplay';
 import { IHeader } from './types';
+import { withTheme } from 'styled-components';
 
 const Header: React.FC<IHeader> = ({
   logo = 'Shiba UI',
@@ -60,4 +61,4 @@ const Header: React.FC<IHeader> = ({
   );
 };
 
-export default Header;
+export default withTheme(Header) as React.FC<IHeader>;

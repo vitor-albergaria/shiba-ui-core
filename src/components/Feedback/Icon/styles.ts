@@ -7,9 +7,11 @@ export const IconWrapper = styled.div<IIconStyles>`
   justify-content: center;
 
   ${({ theme, $variant, $background, $boxSize, $boxShadow }) => {
-    const size = $boxSize ? `${$boxSize}px` : 'fit-content';
     const padding = $variant === 'icon' ? 0 : '10px';
     const background = theme.color[$background];
+
+    const size =
+      $boxSize && $variant !== 'icon' ? `${$boxSize}px` : 'fit-content';
 
     const variants = {
       circle: css`
