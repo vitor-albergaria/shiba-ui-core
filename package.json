@@ -1,6 +1,6 @@
 {
   "name": "shiba-ui-core",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "author": "Vitor Albergaria",
   "description": "A React component library designed to provide reusable, customizable UI elements for building consistent user interfaces.",
   "main": "dist/index.js",
@@ -68,9 +68,7 @@
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "prepare": "npm run build",
     "test": "jest --watchAll",
-    "build-storybook": "storybook build -c ./.storybook/config",
-    "version:patch": "npm version patch", 
-    "publish": "npm publish --access public"
+    "build-storybook": "storybook build -c ./.storybook/config"
   },
   "publishConfig": {
     "access": "public"
