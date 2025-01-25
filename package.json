@@ -1,6 +1,6 @@
 {
   "name": "shiba-ui-core",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "author": "Vitor Albergaria",
   "description": "A React component library designed to provide reusable, customizable UI elements for building consistent user interfaces.",
   "main": "dist/index.js",

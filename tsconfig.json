@@ -24,6 +24,6 @@
     "emitDeclarationOnly": false,
     "types": [] 
   },
-  "include": ["./src/**/*", "./src/theme/config/styled-components.d.ts"],
+  "include": ["./src/**/*", "src/@types/styled-components.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
