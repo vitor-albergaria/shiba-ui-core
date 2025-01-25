@@ -15,8 +15,12 @@ const config: Config.InitialOptions = {
     '**/?(*.)+(spec|test).+(ts|tsx|js)',
   ],
   transform: {
+    '^.+\\.css$': 'jest-transform-css',
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
+  transformIgnorePatterns: [
+    '/node_modules/(?!(@fontsource|nanoid)/)' // Add this line
+  ],
 };
 
 export default config;

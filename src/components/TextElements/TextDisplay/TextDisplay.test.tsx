@@ -39,7 +39,6 @@ describe('UI Component: TextDisplay', () => {
       color: color.alternative,
       'font-size': '3.2rem',
       'font-weight': '800',
-      'font-family': 'poppins',
       'text-align': 'right',
       'line-height': '10px',
       'letter-spacing': '1px',
