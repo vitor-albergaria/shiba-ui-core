@@ -11,7 +11,7 @@ export const AvatarContainer = styled.div<IAvatarStyles>`
     width: ${$size}px;
     height: ${$size}px;
     padding-top: ${theme.spacing.xs};
-    background: ${theme.color[$background]};
+    background: ${theme.color[$background] || 'transparent'};
     box-shadow: ${theme.boxShadow[$boxShadow]};
   `}
 `;
