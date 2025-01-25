@@ -16,12 +16,12 @@ export const TextWrapper = styled.p<ITextDisplayStyles>`
     color: ${theme.color[$textColor]};
     font-size: ${theme.fontSize[$fontSize]}rem;
     font-weight: ${theme.fontWeight[$fontWeight]};
-    font-family: ${theme.fontFamily.default || 'Times New Roman'};
 
     text-align: ${$textAlign};
     line-height: ${validateUnit($lineHeight)};
     letter-spacing: ${validateUnit($letterSpacing)};
     text-decoration: ${$textDecoration};
+    font-family: 'Poppins', sans-serif;
 
     word-break: break-word;
     overflow-wrap: anywhere;

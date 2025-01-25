@@ -14,7 +14,6 @@ const getThemeColors = (themeVariant: string) => {
 export const StyledThemeProvider: React.FC<IStyledProvider> = ({
   children,
   customTheme = {},
-  customFonts = '',
   themeVariant,
 }) => {
   const finalThemeVariant = themeVariant || 'light';
@@ -24,7 +23,6 @@ export const StyledThemeProvider: React.FC<IStyledProvider> = ({
   return (
     <ThemeProvider theme={mergedTheme}>
       <GlobalStyles />
-      {customFonts && <style>{customFonts}</style>}
       {children}
     </ThemeProvider>
   );

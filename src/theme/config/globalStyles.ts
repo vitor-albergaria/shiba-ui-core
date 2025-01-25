@@ -1,5 +1,4 @@
-import '../../assets/fonts/fonts.css';
-
+import '@fontsource/poppins';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -11,5 +10,9 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
   }
 `;

@@ -3,68 +3,44 @@ import { Meta, Typeset } from '@storybook/blocks';
 import { fontSize } from '../../../../src/theme/constants/fontSize';
 import { DocsTitle, DocsDescription } from '../../components/TextElements';
 
-<Meta title="Quick Start/Theming" />
+<Meta title="Quick Start/Styling" />
 
-<DocsTitle text="docs_theming_title" />
-<DocsDescription text="docs_theming_description" />
+<DocsTitle text="docs_styling_title" />
+<DocsDescription text="docs_styling_description_one" />
 
-```jsx
-import { StyledThemeProvider } from 'shiba-ui-core';
-
-const customTheme = {
-  color: {
-    primary: '#ff5733',
-  },
-};
-
-function App() {
-  return (
-    <StyledThemeProvider customTheme={customTheme}>
-      {/* Components... */}
-    </StyledThemeProvider>
-  );
-}
+```bash
+npm install styled-components
 ```
 
-<DocsTitle text="docs_theme_title" />
-<DocsDescription text="docs_theme_description" />
-
-```jsx
-import { StyledThemeProvider } from 'shiba-ui-core';
-
-function App() {
-  return (
-    <StyledThemeProvider themeVariant="dark">
-      {/* Components... */}
-    </StyledThemeProvider>
-  );
-}
+```bash
+yarn add styled-components
 ```
 
-<DocsTitle text="docs_fonts_title" />
-<DocsDescription text="docs_fonts_description" />
+<DocsDescription text="docs_styling_description_two" />
 
 ```jsx
-import { StyledThemeProvider } from 'shiba-ui-core';
+import styled, { useTheme } from 'styled-components';
 
-const customFonts = `
-  @font-face {
-    font-family: 'CustomFont';
-    src: url('/path/to/font.woff2') format('woff2');
-  }
+const StyledButton = styled.button`
+  background-color: ${(props) => props.theme.color.error};
+  color: ${(props) => props.theme.color.text};
 `;
 
-const customTheme = {
-  fontFamily: {
-    default: 'CustomFont',
-  },
-};
+const MyButton = () => {
+  const theme = useTheme();
 
-function App() {
+  return <StyledButton theme={theme}>Custom Button</StyledButton>;
+};
+```
+
+```jsx
+import { MyButton } from './MyButton';
+
+const App = () => {
   return (
-    <StyledThemeProvider customFonts={customFonts} customTheme={customTheme}>
-      {/* Components... */}
-    </StyledThemeProvider>
+    <div>
+      <MyButton />
+    </div>
   );
-}
+};
 ```

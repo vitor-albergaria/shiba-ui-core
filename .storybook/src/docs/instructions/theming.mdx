@@ -3,44 +3,40 @@ import { Meta, Typeset } from '@storybook/blocks';
 import { fontSize } from '../../../../src/theme/constants/fontSize';
 import { DocsTitle, DocsDescription } from '../../components/TextElements';
 
-<Meta title="Quick Start/Styling" />
+<Meta title="Quick Start/Theming" />
 
-<DocsTitle text="docs_styling_title" />
-<DocsDescription text="docs_styling_description_one" />
-
-```bash
-npm install styled-components
-```
-
-```bash
-yarn add styled-components
-```
-
-<DocsDescription text="docs_styling_description_two" />
+<DocsTitle text="docs_theming_title" />
+<DocsDescription text="docs_theming_description" />
 
 ```jsx
-import styled, { useTheme } from 'styled-components';
+import { StyledThemeProvider } from 'shiba-ui-core';
 
-const StyledButton = styled.button`
-  background-color: ${(props) => props.theme.color.error};
-  color: ${(props) => props.theme.color.text};
-`;
-
-const MyButton = () => {
-  const theme = useTheme();
-
-  return <StyledButton theme={theme}>Custom Button</StyledButton>;
+const customTheme = {
+  color: {
+    primary: '#ff5733',
+  },
 };
-```
 
-```jsx
-import { MyButton } from './MyButton';
-
-const App = () => {
+function App() {
   return (
-    <div>
-      <MyButton />
-    </div>
+    <StyledThemeProvider customTheme={customTheme}>
+      {/* Components... */}
+    </StyledThemeProvider>
   );
-};
+}
+```
+
+<DocsTitle text="docs_theme_title" />
+<DocsDescription text="docs_theme_description" />
+
+```jsx
+import { StyledThemeProvider } from 'shiba-ui-core';
+
+function App() {
+  return (
+    <StyledThemeProvider themeVariant="dark">
+      {/* Components... */}
+    </StyledThemeProvider>
+  );
+}
 ```
