@@ -10,7 +10,7 @@ const Avatar: React.FC<IAvatar> = ({
   image,
   size = 50,
   boxShadow = 'rm',
-  background,
+  background = 'primary',
   isHidden,
 }) => {
   const formattedUserName = getNameInitials(username);

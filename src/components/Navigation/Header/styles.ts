@@ -12,7 +12,6 @@ export const HeaderContainer = styled.header`
   height: 80px;
 
   padding: ${({ theme }) => theme.spacing['4x']};
-  background: ${({ theme }) => theme.color.background};
 
   @media (max-width: 767px) {
     padding: ${({ theme }) => theme.spacing['2x']};

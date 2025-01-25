@@ -13,7 +13,7 @@ const CenterContainer = styled.div`
   width: 100%;
   height: 500px;
 
-  background: ${({ theme }) => theme.color.background};
+  background: ${({ theme }) => theme.color.error};
 `;
 
 export const themeDecorator: Decorator = (Story) => {
