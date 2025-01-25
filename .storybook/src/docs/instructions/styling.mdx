@@ -19,7 +19,8 @@ yarn add styled-components
 <DocsDescription text="docs_styling_description_two" />
 
 ```jsx
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
+import { useShibaTheme } from 'siba-ui-core';
 
 const StyledButton = styled.button`
   background-color: ${(props) => props.theme.color.error};
@@ -27,7 +28,7 @@ const StyledButton = styled.button`
 `;
 
 const MyButton = () => {
-  const theme = useTheme();
+  const theme = useShibaTheme();
 
   return <StyledButton theme={theme}>Custom Button</StyledButton>;
 };

@@ -31,3 +31,4 @@ export { default as Timeline } from './components/Viewers/Timeline';
 
 // Provider
 export { StyledThemeProvider } from './theme/providers';
+export { useShibaTheme } from './theme/hooks/useTheme';
