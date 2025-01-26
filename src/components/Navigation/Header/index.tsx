@@ -42,7 +42,7 @@ const Header: React.FC<IHeader> = ({
   return (
     <S.HeaderContainer data-testid="header">
       <S.LogoWrapper>
-        <TextDisplay text={logo} size="5x" weight="bold" />
+        <TextDisplay text={logo} size="3x" weight="bold" />
       </S.LogoWrapper>
 
       <S.HeaderOptionsWrapper>{renderMenuItems()}</S.HeaderOptionsWrapper>
