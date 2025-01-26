@@ -31,3 +31,4 @@ export { default as Timeline } from './components/Viewers/Timeline';
 
 // Provider
 export { StyledThemeProvider } from './theme/providers';
+export type { ThemeType } from './theme/index';

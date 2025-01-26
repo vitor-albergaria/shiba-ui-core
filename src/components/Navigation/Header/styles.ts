@@ -5,17 +5,14 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
 
   position: relative;
+  z-index: 1;
+
   width: 100%;
   height: 80px;
 
-  padding: ${({ theme }) => theme.spacing['4x']};
-
-  @media (max-width: 767px) {
-    padding: ${({ theme }) => theme.spacing['2x']};
-  }
+  padding: clamp(24px, 2vw, 32px);
 `;
 
 export const LogoWrapper = styled.div`
@@ -43,7 +40,6 @@ export const MenuIconWrapper = styled.div`
     display: none;
   }
 `;
-
 
 export const HeaderOption = styled.div<{ $isActive?: boolean }>`
   display: inline-block;

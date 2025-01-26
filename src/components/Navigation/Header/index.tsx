@@ -33,7 +33,7 @@ const Header: React.FC<IHeader> = ({
         $isActive={activeOption === id}
         onClick={() => handleOptionClick(id, label, isInactive, handleClick)}
       >
-        <TextDisplay text={label} size="md" weight="medium" />
+        <TextDisplay text={label} size="lg" weight="medium" />
       </S.HeaderOption>
     ));
 
@@ -42,7 +42,7 @@ const Header: React.FC<IHeader> = ({
   return (
     <S.HeaderContainer data-testid="header">
       <S.LogoWrapper>
-        <TextDisplay text={logo} size="lg" weight="strong" />
+        <TextDisplay text={logo} size="2x" weight="strong" />
       </S.LogoWrapper>
 
       <S.HeaderOptionsWrapper>{renderMenuItems()}</S.HeaderOptionsWrapper>
