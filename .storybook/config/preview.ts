@@ -11,6 +11,7 @@ const preview: Preview = {
   tags: ['autodocs'],
 
   parameters: {
+    docsOnly: true,
     layout: 'fullscreen',
     docs: { container: DocsSettings },
     options: {

@@ -11,7 +11,7 @@ const CenterContainer = styled.div`
   gap: 16px;
 
   width: 100%;
-  height: 500px;
+  height: 400px;
 
   background: ${({ theme }) => theme.color.background};
 `;

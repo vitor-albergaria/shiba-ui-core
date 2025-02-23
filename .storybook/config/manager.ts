@@ -11,7 +11,7 @@ addons.setConfig({
   theme: create({
     brandTitle: 'Shiba UI',
     brandImage: require('../../src/assets/images/logo.webp'),
-    brandUrl: 'https://github.com/vitor-albergaria/shiba-ui',
+    brandUrl: 'https://github.com/vitor-albergaria/shiba-ui-core',
 
     base: 'dark',
     appBg: '#121212',
