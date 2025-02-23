@@ -2,6 +2,7 @@ import Avatar from '.';
 import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -32,6 +33,29 @@ describe('UI Component: Avatar', () => {
       height: '100px',
       background: color.accent,
       'box-shadow': 'none',
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'avatar-text',
+    component: Avatar,
+    componentProperties: { username: 'Test User' },
+    expectedAttributes: {
+      role: 'img',
+      'aria-label': 'Test User',
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'avatar-image',
+    component: Avatar,
+    componentProperties: { 
+      image: 'https://encurtador.com.br/Kw9pE',
+      username: 'Test User'
+    },
+    expectedAttributes: {
+      role: 'img',
+      alt: 'Test User',
     },
   });
 });

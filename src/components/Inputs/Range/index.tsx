@@ -30,6 +30,12 @@ const Range: React.FC<IRange> = ({
     <S.InputRange
       data-testid="range"
       type="range"
+      role="slider"
+      aria-valuemin={min}
+      aria-valuemax={max}
+      aria-valuenow={rangeValue}
+      aria-valuetext={`${rangeValue}%`}
+      aria-orientation="horizontal"
       min={min}
       max={max}
       value={rangeValue}

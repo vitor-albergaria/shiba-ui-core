@@ -4,6 +4,7 @@ import {
   testRenderingOfComponent,
   testComponentVisibility,
   testComponentText,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 
 describe('UI Component: Header', () => {
@@ -24,5 +25,17 @@ describe('UI Component: Header', () => {
     testId: 'text-display',
     component: Header,
     componentProperties: {},
+  });
+
+  testComponentAccessibility({
+    testId: 'header',
+    component: Header,
+    componentProperties: { 
+      logo: 'Test Logo',
+      menuItems: [{ id: 1, label: 'Home', handleClick: () => {} }]
+    },
+    expectedAttributes: {
+      role: 'menubar',
+    },
   });
 });

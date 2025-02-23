@@ -6,6 +6,7 @@ import {
   testComponentStyleByProperties,
   testComponentVisibility,
   testComponentDisabledBehavior,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 
 describe('UI Component: Checkbox', () => {
@@ -37,6 +38,17 @@ describe('UI Component: Checkbox', () => {
     component: Checkbox,
     expectedResultingStyles: {
       'border-color': color.highlight,
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'checkbox',
+    component: Checkbox,
+    componentProperties: {},
+    expectedAttributes: {
+      role: 'checkbox',
+      'aria-checked': 'false',
+      'aria-disabled': 'false',
     },
   });
 });

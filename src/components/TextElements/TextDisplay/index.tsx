@@ -19,6 +19,7 @@ const TextDisplay: React.FC<ITextDisplay> = ({
   return (
     <S.TextWrapper
       data-testid="text-display"
+      role="text"
       $textColor={color}
       $fontSize={size}
       $fontWeight={weight}

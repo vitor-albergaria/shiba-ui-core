@@ -31,9 +31,16 @@ const Tooltip: React.FC<ITooltip> = ({
       onMouseLeave={hideTooltip}
       onFocus={showTooltip}
       onBlur={hideTooltip}
+      role="none"
     >
-      {children}
+      <div 
+        aria-describedby="tooltip"
+        tabIndex={0}
+      >
+        {children}
+      </div>
       <S.TooltipContainer
+        id="tooltip"
         data-testid="tooltip"
         $position={position}
         $background={background}
@@ -42,7 +49,7 @@ const Tooltip: React.FC<ITooltip> = ({
         aria-hidden={!isVisible}
       >
         <TextDisplay color={color} text={content} />
-        <S.Arrow $position={position} $background={background} />
+        <S.Arrow $position={position} $background={background} aria-hidden="true" />
       </S.TooltipContainer>
     </S.Wrapper>
   );

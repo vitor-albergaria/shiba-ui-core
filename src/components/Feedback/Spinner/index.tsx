@@ -12,6 +12,9 @@ const Spinner: React.FC<ISpinner> = ({
 
   return (
     <S.SpinnerWrapper
+      role="status"
+      aria-label="Loading"
+      aria-busy="true"
       data-testid="spinner"
       $background={background}
       $size={size}

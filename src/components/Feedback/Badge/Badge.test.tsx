@@ -6,6 +6,7 @@ import {
   testComponentClick,
   testComponentVisibility,
   testComponentIconRendering,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -57,5 +58,29 @@ describe('UI Component: Badge', () => {
   testComponentIconRendering({
     component: Badge,
     componentProperties: { rightIcon: 'BellIcon' },
+  });
+
+  testComponentAccessibility({
+    testId: 'badge',
+    component: Badge,
+    componentProperties: { text: 'Test Badge' },
+    expectedAttributes: {
+      role: 'status',
+      'aria-label': 'Test Badge',
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'badge',
+    component: Badge,
+    componentProperties: { 
+      text: 'Clickable Badge',
+      onClick: () => {} 
+    },
+    expectedAttributes: {
+      role: 'status',
+      'aria-label': 'Clickable Badge',
+      type: 'button',
+    },
   });
 });

@@ -3,6 +3,7 @@ import Timeline from '.';
 import {
   testRenderingOfComponent,
   testComponentVisibility,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 
 describe('UI Component: Timeline', () => {
@@ -16,5 +17,15 @@ describe('UI Component: Timeline', () => {
     testId: 'timeline',
     component: Timeline,
     componentProperties: { data: [] },
+  });
+
+  testComponentAccessibility({
+    testId: 'timeline',
+    component: Timeline,
+    componentProperties: { data: [] },
+    expectedAttributes: {
+      role: 'list',
+      'aria-label': 'Timeline',
+    },
   });
 });

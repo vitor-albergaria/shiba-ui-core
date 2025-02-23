@@ -50,6 +50,11 @@ const Button: React.FC<IButton> = ({
 
   return (
     <S.ButtonWrapper
+      role="button"
+      type="button"
+      aria-disabled={isDisabled}
+      aria-busy={isLoading}
+      aria-label={text}
       data-testid="button"
       onClick={handleClick}
       $variant={variant}

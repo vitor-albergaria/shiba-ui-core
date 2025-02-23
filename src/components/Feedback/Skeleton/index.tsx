@@ -15,6 +15,12 @@ const Skeleton: React.FC<ISkeleton> = ({
 
   return (
     <S.SkeletonWrapper
+      role="progressbar"
+      aria-label="Loading content"
+      aria-busy="true"
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={0}
       data-testid="skeleton"
       $height={height}
       $width={width}

@@ -16,7 +16,6 @@ const Radio: React.FC<IRadio> = ({
 
   const onRadioValueChange = () => {
     if (isDisabled) return;
-
     const newCheckedState = !radioIsChecked;
 
     setRadioIsChecked(newCheckedState);
@@ -29,8 +28,13 @@ const Radio: React.FC<IRadio> = ({
 
   return (
     <S.Box
+      as="button"
+      type="button"
+      role="radio"
       data-testid="radio"
       onClick={onRadioValueChange}
+      aria-checked={radioIsChecked}
+      aria-disabled={isDisabled}
       $background={background}
       $size={size}
       $isDisabled={isDisabled}

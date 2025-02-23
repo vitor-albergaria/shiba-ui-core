@@ -28,8 +28,13 @@ const Switch: React.FC<ISwitch> = ({
 
   return (
     <S.Container
+      as="button"
+      type="button"
+      role="switch"
       data-testid="switch"
       onClick={onSwitchValueChange}
+      aria-checked={switchIsChecked}
+      aria-disabled={isDisabled}
       $background={background}
       $size={size}
       $isChecked={switchIsChecked}

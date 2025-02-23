@@ -213,3 +213,22 @@ export const testComponentDisabledBehavior = <T,>({
     }
   });
 };
+
+export const testComponentAccessibility = <T,>({
+  testId,
+  component: Component,
+  componentProperties,
+  expectedAttributes,
+}: IAttributesTest<T>) => {
+  it(`should render the component ${testId} with correct accessibility attributes`, () => {
+    const { getByTestId } = renderWithTheme(
+      <Component {...componentProperties} />
+    );
+
+    const element = getByTestId(testId);
+
+    for (const [attr, expectedValue] of Object.entries(expectedAttributes)) {
+      expect(element).toHaveAttribute(attr, expectedValue.toString());
+    }
+  });
+};

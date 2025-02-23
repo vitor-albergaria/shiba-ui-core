@@ -32,8 +32,16 @@ const ProgressCircle: React.FC<IProgressCircle> = ({
   if (isHidden) return null;
   
   return (
-    <S.CircleContainer data-testid="progress-circle" $size={size}>
-      <S.SVG viewBox="0 0 80 80" $size={size}>
+    <S.CircleContainer 
+      data-testid="progress-circle" 
+      $size={size}
+      role="progressbar"
+      aria-valuenow={circleProgressValue}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-label={`Progress: ${circleProgressValue}%`}
+    >
+      <S.SVG viewBox="0 0 80 80" $size={size} aria-hidden="true">
         <S.CircleSVG
           cx="40"
           cy="40"
@@ -53,7 +61,7 @@ const ProgressCircle: React.FC<IProgressCircle> = ({
           data-testid="progress-circle-range"
         />
       </S.SVG>
-      <S.ProgressValueText>
+      <S.ProgressValueText aria-hidden="true">
         <TextDisplay
           text={`${circleProgressValue}%`}
           weight="strong"

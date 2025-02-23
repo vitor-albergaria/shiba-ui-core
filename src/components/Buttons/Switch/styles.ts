@@ -6,6 +6,7 @@ export const Container = styled.div<ISwitchStyles>`
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  border: none;
 
   ${({ theme, $size, $background, $isChecked, $isDisabled }) => {
     const determineSwitchColor = () => {

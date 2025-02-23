@@ -5,6 +5,7 @@ import {
   testComponentStyleByProperties,
   testComponentVisibility,
   testComponentText,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -50,5 +51,14 @@ describe('UI Component: TextDisplay', () => {
     testId: 'text-display',
     component: TextDisplay,
     componentProperties: {},
+  });
+
+  testComponentAccessibility({
+    testId: 'text-display',
+    component: TextDisplay,
+    componentProperties: { text: 'Test Text' },
+    expectedAttributes: {
+      role: 'text',
+    },
   });
 });

@@ -74,24 +74,36 @@ const PieChart: React.FC<IPieChart> = ({
   if (isHidden) return null;
 
   return (
-    <S.Container>
-      <S.ChartContainer data-testid="pie-chart" $size={size}>
-        <S.SVG viewBox={`0 0 ${size} ${size}`}>{paths}</S.SVG>
+    <S.Container role="figure" aria-label="Pie Chart">
+      <S.ChartContainer 
+        data-testid="pie-chart" 
+        $size={size}
+        role="img"
+        aria-label={`Chart showing: ${validatedData.map(item => 
+          `${item.label} ${item.percent.toFixed(1)}%`
+        ).join(', ')}`}
+      >
+        <S.SVG viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
+          {paths}
+        </S.SVG>
       </S.ChartContainer>
 
       {!isLegendHidden && !!size && (
-        <S.Legend>
+        <S.Legend role="list" aria-label="Chart legend">
           {validatedData.map((item, index) => (
             <S.LegendItem
               key={nanoid()}
+              role="listitem"
               $isActive={activeIndex === index}
               onMouseEnter={() => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(null)}
+              aria-label={`${item.label}: ${item.percent.toFixed(1)}%`}
             >
               <S.LegendColor
                 $color={item?.color as ColorType}
                 $isActive={activeIndex === index}
                 $size={size}
+                aria-hidden="true"
               />
               <TextDisplay
                 size="sm"

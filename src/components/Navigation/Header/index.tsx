@@ -30,8 +30,17 @@ const Header: React.FC<IHeader> = ({
     menuItems?.map(({ id, label, handleClick, isInactive }) => (
       <S.HeaderOption
         key={id}
+        role="menuitem"
+        tabIndex={0}
+        aria-current={activeOption === id ? 'page' : undefined}
+        aria-disabled={isInactive}
         $isActive={activeOption === id}
         onClick={() => handleOptionClick(id, label, isInactive, handleClick)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            handleOptionClick(id, label, isInactive, handleClick);
+          }
+        }}
       >
         <TextDisplay text={label} size="lg" weight="strong" />
       </S.HeaderOption>
@@ -40,20 +49,47 @@ const Header: React.FC<IHeader> = ({
   if (isHidden) return null;
 
   return (
-    <S.HeaderContainer data-testid="header">
+    <S.HeaderContainer data-testid="header" role="menubar">
       <S.LogoWrapper>
         <TextDisplay text={logo} size="3x" weight="bold" />
       </S.LogoWrapper>
 
-      <S.HeaderOptionsWrapper>{renderMenuItems()}</S.HeaderOptionsWrapper>
+      <S.HeaderOptionsWrapper aria-label="Main navigation">
+        {renderMenuItems()}
+      </S.HeaderOptionsWrapper>
 
-      <S.MenuIconWrapper onClick={toggleMenu}>
-        <Icon icon="MenuIcon" background="content" iconSize={20} />
+      <S.MenuIconWrapper
+        onClick={toggleMenu}
+        role="button"
+        aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
+        tabIndex={0}
+      >
+        <Icon
+          icon="MenuIcon"
+          background="content"
+          iconSize={20}
+          aria-hidden="true"
+        />
       </S.MenuIconWrapper>
 
-      <S.FullScreenMenu $isMenuOpen={isMenuOpen}>
-        <S.CloseIcon onClick={toggleMenu}>
-          <Icon icon="ErrorTwoIcon" background="content" iconSize={16} />
+      <S.FullScreenMenu
+        $isMenuOpen={isMenuOpen}
+        role="menu"
+        aria-hidden={!isMenuOpen}
+      >
+        <S.CloseIcon
+          onClick={toggleMenu}
+          role="button"
+          aria-label="Close menu"
+          tabIndex={0}
+        >
+          <Icon
+            icon="ErrorTwoIcon"
+            background="content"
+            iconSize={16}
+            aria-hidden="true"
+          />
         </S.CloseIcon>
         {renderMenuItems()}
       </S.FullScreenMenu>

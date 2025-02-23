@@ -29,6 +29,8 @@ const Avatar: React.FC<IAvatar> = ({
   if (!image) {
     return (
       <S.AvatarContainer
+        role="img"
+        aria-label={username || 'User avatar'}
         data-testid="avatar-text"
         $size={size}
         $background={background}
@@ -46,9 +48,10 @@ const Avatar: React.FC<IAvatar> = ({
 
   return (
     <S.AvatarImage
+      role="img"
       data-testid="avatar-image"
       src={image}
-      alt="Avatar"
+      alt={username || 'User avatar'}
       $size={size}
       $background={background}
       $boxShadow={boxShadow}

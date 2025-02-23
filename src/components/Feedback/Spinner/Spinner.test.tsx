@@ -4,6 +4,7 @@ import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
   testComponentVisibility,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -30,5 +31,16 @@ describe('UI Component: Spinner', () => {
     testId: 'spinner',
     component: Spinner,
     componentProperties: {},
+  });
+
+  testComponentAccessibility({
+    testId: 'spinner',
+    component: Spinner,
+    componentProperties: {},
+    expectedAttributes: {
+      role: 'status',
+      'aria-label': 'Loading',
+      'aria-busy': 'true',
+    },
   });
 });

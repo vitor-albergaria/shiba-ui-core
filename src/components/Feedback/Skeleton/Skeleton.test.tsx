@@ -4,6 +4,7 @@ import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
   testComponentVisibility,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -47,5 +48,19 @@ describe('UI Component: Skeleton', () => {
     testId: 'skeleton',
     component: Skeleton,
     componentProperties: {},
+  });
+
+  testComponentAccessibility({
+    testId: 'skeleton',
+    component: Skeleton,
+    componentProperties: {},
+    expectedAttributes: {
+      role: 'progressbar',
+      'aria-label': 'Loading content',
+      'aria-busy': 'true',
+      'aria-valuemin': '0',
+      'aria-valuemax': '100',
+      'aria-valuenow': '0',
+    },
   });
 });

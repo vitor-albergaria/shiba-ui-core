@@ -8,17 +8,21 @@ const Timeline: React.FC<ITimeline> = ({ data = [], isHidden = false }) => {
   if (isHidden) return null;
 
   return (
-    <S.TimelineContainer data-testid="timeline">
+    <S.TimelineContainer
+      data-testid="timeline"
+      role="list"
+      aria-label="Timeline"
+    >
       {data.map((item) => (
-        <S.TimelineItem key={item?.id}>
-          <S.TimelineMarker>
+        <S.TimelineItem key={item?.id} role="listitem">
+          <S.TimelineMarker aria-hidden="true">
             <S.TimelineCircle />
             <S.TimelineLine />
           </S.TimelineMarker>
 
           <S.TimelineContent>
             <S.TimelineHeader>
-              <TextDisplay text={item?.title} weight="bold" />
+              <TextDisplay text={item?.title} weight="bold" role="heading" />
 
               <TextDisplay
                 text={item?.subtitle}
@@ -28,10 +32,10 @@ const Timeline: React.FC<ITimeline> = ({ data = [], isHidden = false }) => {
               />
             </S.TimelineHeader>
 
-            <S.TimelineDetails>
+            <S.TimelineDetails role="list" aria-label="Details">
               {item?.details?.map((topic, index) => (
-                <S.DetailItem key={index}>
-                  <TextDisplay text="•" />
+                <S.DetailItem key={index} role="listitem">
+                  <TextDisplay text="•" aria-hidden="true" />
                   <TextDisplay text={topic} />
                 </S.DetailItem>
               ))}

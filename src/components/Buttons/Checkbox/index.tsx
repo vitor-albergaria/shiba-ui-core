@@ -30,8 +30,13 @@ const Checkbox: React.FC<ICheckbox> = ({
 
   return (
     <S.Box
+      as="button"
+      type="button"
+      role="checkbox"
       data-testid="checkbox"
       onClick={onCheckboxChange}
+      aria-checked={checkboxIsChecked}
+      aria-disabled={isDisabled}
       $background={background}
       $isDisabled={isDisabled}
       $size={size}

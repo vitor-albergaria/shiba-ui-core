@@ -3,9 +3,14 @@ import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
   testComponentVisibility,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 
 describe('UI Component: PieChart', () => {
+  const mockData = [
+    { color: 'error', label: 'Jest Test', percent: 100 }
+  ];
+
   testRenderingOfComponent({
     testId: 'pie-chart',
     component: PieChart,
@@ -33,6 +38,16 @@ describe('UI Component: PieChart', () => {
     componentProperties: {
       data: [{ color: 'error', label: 'Jest Test', percent: 100 }],
       size: 200,
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'pie-chart',
+    component: PieChart,
+    componentProperties: { data: mockData },
+    expectedAttributes: {
+      role: 'img',
+      'aria-label': 'Chart showing: Jest Test 100.0%',
     },
   });
 });

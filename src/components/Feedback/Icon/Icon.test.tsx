@@ -3,6 +3,7 @@ import {
   testRenderingOfComponent,
   testComponentVariant,
   testComponentVisibility,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -57,5 +58,29 @@ describe('UI Component: Icon', () => {
     testId: 'icon',
     component: Icon,
     componentProperties: {},
+  });
+
+  testComponentAccessibility({
+    testId: 'icon',
+    component: Icon,
+    componentProperties: { icon: 'BellIcon' },
+    expectedAttributes: {
+      role: 'img',
+      'aria-label': 'Bell',
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'icon',
+    component: Icon,
+    componentProperties: { 
+      icon: 'BellIcon',
+      onClick: () => {} 
+    },
+    expectedAttributes: {
+      role: 'img',
+      'aria-label': 'Bell',
+      type: 'button',
+    },
   });
 });

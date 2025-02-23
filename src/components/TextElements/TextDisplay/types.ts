@@ -15,6 +15,8 @@ export interface ITextDisplay {
   weight?: FontWeightType;
   lineHeight?: number;
   letterSpacing?: number;
+  role?: 'text' | 'heading' | 'alert' | 'status';
+  'aria-label'?: string;
 }
 
 export interface ITextDisplayStyles {

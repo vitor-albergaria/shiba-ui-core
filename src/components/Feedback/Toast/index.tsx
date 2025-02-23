@@ -71,6 +71,9 @@ const ToastMessage: React.FC<IToast> = ({
 
   return (
     <S.ToastItem
+      role="alert"
+      aria-live="polite"
+      data-testid="toast"
       $isExiting={isExiting}
       $background={background}
       $borderColor={borderColor}
@@ -81,8 +84,12 @@ const ToastMessage: React.FC<IToast> = ({
     >
       <TextDisplay text={message} size="sm" weight="strong" color={color} />
 
-      <S.CloseIcon onClick={() => toastManager.removeToast(id)}>
-        <Icon icon="ErrorTwoIcon" iconSize={10} background="highlight" />
+      <S.CloseIcon 
+        onClick={() => toastManager.removeToast(id)}
+        role="button"
+        aria-label="Close notification"
+      >
+        <Icon icon="ErrorTwoIcon" iconSize={10} background="highlight" aria-hidden="true" />
       </S.CloseIcon>
     </S.ToastItem>
   );
@@ -100,7 +107,7 @@ const ToastContainer: React.FC = () => {
   }, []);
 
   return (
-    <S.ToastContainerStyled>
+    <S.ToastContainerStyled role="region" aria-label="Notifications">
       {toasts.map((toast) => (
         <ToastMessage key={toast?.id} {...toast} />
       ))}

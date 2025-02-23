@@ -4,6 +4,7 @@ import {
   testRenderingOfComponent,
   testComponentStyleByProperties,
   testComponentVisibility,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 
 describe('UI Component: ProgressCircle', () => {
@@ -27,5 +28,18 @@ describe('UI Component: ProgressCircle', () => {
     testId: 'progress-circle',
     component: ProgressCircle,
     componentProperties: {},
+  });
+
+  testComponentAccessibility({
+    testId: 'progress-circle',
+    component: ProgressCircle,
+    componentProperties: { progressValue: 75 },
+    expectedAttributes: {
+      role: 'progressbar',
+      'aria-valuenow': '75',
+      'aria-valuemin': '0',
+      'aria-valuemax': '100',
+      'aria-label': 'Progress: 75%',
+    },
   });
 });

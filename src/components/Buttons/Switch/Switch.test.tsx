@@ -4,6 +4,7 @@ import {
   testComponentStyleByProperties,
   testComponentVisibility,
   testComponentDisabledBehavior,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -35,6 +36,17 @@ describe('UI Component: Switch', () => {
     component: Switch,
     expectedResultingStyles: {
       background: color.highlight,
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'switch',
+    component: Switch,
+    componentProperties: {},
+    expectedAttributes: {
+      role: 'switch',
+      'aria-checked': 'false',
+      'aria-disabled': 'false',
     },
   });
 });

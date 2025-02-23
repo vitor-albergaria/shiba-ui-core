@@ -27,6 +27,10 @@ const Icon: React.FC<IIcon> = ({
 
   return (
     <S.IconWrapper
+      as={onClick !== noop ? 'button' : 'div'}
+      type={onClick !== noop ? 'button' : undefined}
+      role="img"
+      aria-label={icon.replace('Icon', '')}
       data-testid="icon"
       onClick={handleClick}
       $variant={variant}
@@ -34,7 +38,7 @@ const Icon: React.FC<IIcon> = ({
       $boxShadow={boxShadow}
       $boxSize={boxSize}
     >
-      <svg width={iconSize} height={iconSize} viewBox={view}>
+      <svg width={iconSize} height={iconSize} viewBox={view} aria-hidden="true">
         {path.map((data: string, index: number) => (
           <path
             key={index}

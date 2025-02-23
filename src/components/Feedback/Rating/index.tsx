@@ -54,6 +54,9 @@ const Rating: React.FC<IRating> = ({
         $interactive={!readonly}
         onMouseLeave={handleMouseLeave}
         $size={size}
+        role="radio"
+        aria-checked={currentValue >= position}
+        aria-label={`${position} star${position === 1 ? '' : 's'}`}
       >
         {!readonly && (
           <S.ClickArea
@@ -83,7 +86,12 @@ const Rating: React.FC<IRating> = ({
   if (isHidden) return null;
 
   return (
-    <S.RatingContainer $gap={gap} data-testid="rating">
+    <S.RatingContainer 
+      $gap={gap} 
+      data-testid="rating"
+      role="radiogroup"
+      aria-label={`Rating: ${currentValue} out of ${maxStars} stars`}
+    >
       {stars}
     </S.RatingContainer>
   );

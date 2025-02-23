@@ -25,10 +25,14 @@ const Badge: React.FC<IBadge> = ({
 
   return (
     <S.BadgeContainer
+      as={onClick !== noop ? 'button' : 'div'}
+      type={onClick !== noop ? 'button' : undefined}
+      role="status"
       data-testid="badge"
       $background={background}
       $borderRadius={borderRadius}
       onClick={onClick}
+      aria-label={text}
     >
       {leftIcon && renderIcon(leftIcon)}
       <TextDisplay text={text} color={color} />

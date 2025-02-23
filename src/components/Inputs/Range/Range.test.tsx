@@ -4,6 +4,7 @@ import {
   testComponentStyleByProperties,
   testComponentAttributes,
   testComponentVisibility,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 
 describe('UI Component: Range', () => {
@@ -54,5 +55,19 @@ describe('UI Component: Range', () => {
     testId: 'range',
     component: Range,
     componentProperties: { value: 0 },
+  });
+
+  testComponentAccessibility({
+    testId: 'range',
+    component: Range,
+    componentProperties: { value: 50, min: 0, max: 100 },
+    expectedAttributes: {
+      role: 'slider',
+      'aria-valuemin': '0',
+      'aria-valuemax': '100',
+      'aria-valuenow': '50',
+      'aria-valuetext': '50%',
+      'aria-orientation': 'horizontal',
+    },
   });
 });

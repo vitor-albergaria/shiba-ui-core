@@ -4,6 +4,7 @@ import {
   testComponentStyleByProperties,
   testComponentVisibility,
   testComponentDisabledBehavior,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -36,6 +37,17 @@ describe('UI Component: Radio', () => {
     component: Radio,
     expectedResultingStyles: {
       'border-color': color.highlight,
+    },
+  });
+
+  testComponentAccessibility({
+    testId: 'radio',
+    component: Radio,
+    componentProperties: {},
+    expectedAttributes: {
+      role: 'radio',
+      'aria-checked': 'false',
+      'aria-disabled': 'false',
     },
   });
 });

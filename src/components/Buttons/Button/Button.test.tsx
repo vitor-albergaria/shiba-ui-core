@@ -9,6 +9,7 @@ import {
   testComponentLoadingBehavior,
   testComponentIconRendering,
   testComponentDisabledBehavior,
+  testComponentAccessibility,
 } from '../../../tests/functions';
 import { color } from '../../../theme/constants/color';
 
@@ -128,5 +129,21 @@ describe('UI Component: Button', () => {
     expectedResultingStyles: {
       width: '100%',
     },
+  });
+
+  testComponentAccessibility({
+    testId: 'button',
+    component: Button,
+    componentProperties: {
+      text: 'Accessibility Test',
+      isDisabled: true,
+      isLoading: true
+    },
+    expectedAttributes: {
+      'role': 'button',
+      'aria-label': 'Accessibility Test',
+      'aria-disabled': 'true',
+      'aria-busy': 'true'
+    }
   });
 });
