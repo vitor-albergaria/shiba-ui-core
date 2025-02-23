@@ -10,7 +10,8 @@ import {
 
 const meta: Meta<ISpinner> = {
   title: 'Components/Feedback/Spinner',
-  component: Spinner,
+  component: Spinner, 
+  tags: ['!dev'],
   argTypes: {
     size: {
       control: 'number',

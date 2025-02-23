@@ -11,6 +11,7 @@ import { color } from '../../../theme/constants/color';
 const meta: Meta<IRange> = {
   title: 'Components/Inputs/Range',
   component: Range,
+  tags: ['!dev'],
   argTypes: {
     value: {
       control: 'number',

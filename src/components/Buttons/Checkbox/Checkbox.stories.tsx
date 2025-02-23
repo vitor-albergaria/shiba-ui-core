@@ -13,6 +13,7 @@ import {
 const meta: Meta<ICheckbox> = {
   title: 'Components/Buttons/Checkbox',
   component: Checkbox,
+  tags: ['!dev'],
   argTypes: {
     isChecked: {
       control: 'boolean',

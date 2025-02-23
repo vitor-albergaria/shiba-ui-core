@@ -6,6 +6,7 @@ import { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<ITimeline> = {
   title: 'Components/Viewers/Timeline',
   component: Timeline,
+  tags: ['!dev'],
   argTypes: {
     data: {
       control: 'object',

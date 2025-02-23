@@ -11,6 +11,7 @@ import {
 const meta: Meta<IRadio> = {
   title: 'Components/Buttons/Radio',
   component: Radio,
+  tags: ['!dev'],
   argTypes: {
     isChecked: {
       control: 'boolean',

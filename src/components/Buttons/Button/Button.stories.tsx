@@ -16,6 +16,7 @@ import { boxShadow } from '../../../theme/constants/boxShadow';
 const meta: Meta<IButton> = {
   title: 'Components/Buttons/Button',
   component: Button,
+  tags: ['!dev'],
   argTypes: {
     text: {
       control: 'text',

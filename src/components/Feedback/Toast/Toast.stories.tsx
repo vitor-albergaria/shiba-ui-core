@@ -8,6 +8,7 @@ import { t } from 'i18next';
 const meta: Meta<typeof ToastContainer> = {
   title: 'Components/Feedback/Toast',
   component: ToastContainer,
+  tags: ['!dev'],
   parameters: {
     docs: {
       description: {

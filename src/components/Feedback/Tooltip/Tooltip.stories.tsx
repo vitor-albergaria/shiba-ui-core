@@ -12,6 +12,7 @@ import {
 const meta: Meta<ITooltip> = {
   title: 'Components/Feedback/Tooltip',
   component: Tooltip,
+  tags: ['!dev'],
   argTypes: {
     children: {
       description: t('docs_children'),

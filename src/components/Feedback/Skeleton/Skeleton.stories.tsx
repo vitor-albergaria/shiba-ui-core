@@ -12,6 +12,7 @@ import { sizeSummary } from '../../../theme/constants/size';
 const meta: Meta<ISkeleton> = {
   title: 'Components/Feedback/Skeleton',
   component: Skeleton,
+  tags: ['!dev'],
   argTypes: {
     background: {
       control: 'select',

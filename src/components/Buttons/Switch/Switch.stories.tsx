@@ -11,6 +11,7 @@ import {
 const meta: Meta<ISwitch> = {
   title: 'Components/Buttons/Switch',
   component: Switch,
+  tags: ['!dev'],
   argTypes: {
     isChecked: {
       control: 'boolean',

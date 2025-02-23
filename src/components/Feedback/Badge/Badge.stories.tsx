@@ -14,6 +14,7 @@ import { sizeSummary } from '../../../theme/constants/size';
 const meta: Meta<IBadge> = {
   title: 'Components/Feedback/Badge',
   component: Badge,
+  tags: ['!dev'],
   argTypes: {
     text: {
       control: 'text',

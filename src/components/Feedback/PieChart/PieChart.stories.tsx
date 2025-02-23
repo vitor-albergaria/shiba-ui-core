@@ -6,6 +6,7 @@ import { t } from 'i18next';
 const meta: Meta<IPieChart> = {
   title: 'Components/Feedback/PieChart',
   component: PieChart,
+  tags: ['!dev'],
   argTypes: {
     data: {
       control: { type: 'object' },

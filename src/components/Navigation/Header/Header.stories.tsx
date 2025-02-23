@@ -6,6 +6,7 @@ import { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<IHeader> = {
   title: 'Components/Navigation/Header',
   component: Header,
+  tags: ['!dev'],
   argTypes: {
     logo: {
       control: 'text',

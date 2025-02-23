@@ -11,6 +11,7 @@ import { getEntryOptionsForSummary } from '../../../utils/docs/storybook';
 const meta: Meta<ITextDisplay> = {
   title: 'Components/TextElements/TextDisplay',
   component: TextDisplay,
+  tags: ['!dev'],
   argTypes: {
     text: {
       control: 'text',

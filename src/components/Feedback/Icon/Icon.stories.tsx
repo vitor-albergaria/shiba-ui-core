@@ -14,6 +14,7 @@ import {
 const meta: Meta<IIcon> = {
   title: 'Components/Feedback/Icon',
   component: Icon,
+  tags: ['!dev'],
   argTypes: {
     icon: {
       control: 'select',

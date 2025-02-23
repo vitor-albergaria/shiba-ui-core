@@ -12,6 +12,7 @@ import {
 const meta: Meta<IAvatar> = {
   title: 'Components/Feedback/Avatar',
   component: Avatar,
+  tags: ['!dev'],
   argTypes: {
     image: {
       control: 'text',

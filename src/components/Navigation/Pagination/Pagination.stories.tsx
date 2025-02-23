@@ -6,6 +6,7 @@ import { t } from 'i18next';
 const meta: Meta<IPagination> = {
   title: 'Components/Navigation/Pagination',
   component: Pagination,
+  tags: ['!dev'],
   argTypes: {
     currentPage: {
       control: 'number',

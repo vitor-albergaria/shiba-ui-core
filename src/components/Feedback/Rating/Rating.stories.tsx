@@ -12,6 +12,7 @@ import { spacing } from '../../../theme/constants/spacing';
 const meta: Meta<IRating> = {
   title: 'Components/Feedback/Rating',
   component: Rating,
+  tags: ['!dev'],
   argTypes: {
     rating: {
       control: 'number',

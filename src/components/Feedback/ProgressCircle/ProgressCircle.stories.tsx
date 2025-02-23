@@ -12,6 +12,7 @@ import { color } from '../../../theme/constants/color';
 const meta: Meta<IProgressCircle> = {
   title: 'Components/Feedback/ProgressCircle',
   component: ProgressCircle,
+  tags: ['!dev'],
   argTypes: {
     progressValue: {
       control: 'number',
