@@ -16,17 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-          
+          cache: 'yarn'
+
       - name: Install dependencies
-        run: yarn install
-        
+        run: yarn install --frozen-lockfile
+
       - name: Run tests
-        run: yarn test
-        
+        run: yarn test --watchAll=false --ci --coverage
+
       - name: Build package
         run: yarn build
 
@@ -40,9 +41,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+          cache: 'yarn'
 
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          install_command: yarn install
+          install_command: yarn install --frozen-lockfile
           build_command: yarn build-storybook
-          path: storybook-static 
+          path: storybook-static
